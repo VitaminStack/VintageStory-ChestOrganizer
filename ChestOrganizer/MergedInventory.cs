@@ -353,7 +353,10 @@ public class MergedInventory : InventoryBase {
         public void Open() {
             var player = api.World.Player;
             if (!Inventory.HasOpened(player)) {
-                player.InventoryManager.OpenInventory(Inventory);
+                var packet = player.InventoryManager.OpenInventory(Inventory);
+                if (packet != null) {
+                    api.Network.SendPacketClient(packet);
+                }
                 SendPacket(api, Position, open: true);
             }
             api.Gui.PlaySound(openSound, randomizePitch: true);
