@@ -37,7 +37,6 @@ public class Main : ModSystem {
 
     public bool OpenAll(KeyCombination _) {
         var player = api.World.Player;
-        if (player.WorldData.CurrentGameMode == EnumGameMode.Creative) return false;
         var reinforcement = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
 
         float range = player.WorldData.PickingRange + 1;
