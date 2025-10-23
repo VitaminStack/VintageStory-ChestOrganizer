@@ -1,53 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="VintagestoryAPI">
-      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="VSSurvivalMod">
-      <HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="VSEssentials">
-      <HintPath>$(VINTAGE_STORY)/Mods/VSEssentials.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="VSCreativeMod">
-      <HintPath>$(VINTAGE_STORY)/Mods/VSCreativeMod.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>$(VINTAGE_STORY)/Lib/Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="0Harmony">
-      <HintPath>$(VINTAGE_STORY)/Lib/0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="VintagestoryLib">
-      <HintPath>$(VINTAGE_STORY)/VintagestoryLib.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>$(VINTAGE_STORY)/Lib/protobuf-net.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="cairo-sharp">
-      <HintPath>$(VINTAGE_STORY)/Lib/cairo-sharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Data.Sqlite">
-      <HintPath>$(VINTAGE_STORY)/Lib/Microsoft.Data.Sqlite.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
 
 <ItemGroup>
   <Content Include="assets\**">
@@ -56,6 +13,205 @@
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
+</ItemGroup>
+
+<ItemGroup>
+  <ProjectReference Include="..\ZZCakeBuild\CakeBuild.csproj" />
+</ItemGroup>
+
+<ItemGroup>
+  <Reference Include="0Harmony">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\0Harmony.dll</HintPath>
+  </Reference>
+  <Reference Include="AnimatedGif">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\AnimatedGif.dll</HintPath>
+  </Reference>
+  <Reference Include="cairo-sharp">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\cairo-sharp.dll</HintPath>
+  </Reference>
+  <Reference Include="CommandLine">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\CommandLine.dll</HintPath>
+  </Reference>
+  <Reference Include="csogg">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\csogg.dll</HintPath>
+  </Reference>
+  <Reference Include="csvorbis">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\csvorbis.dll</HintPath>
+  </Reference>
+  <Reference Include="DnsClient">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\DnsClient.dll</HintPath>
+  </Reference>
+  <Reference Include="Eto.Wpf">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Eto.Wpf.dll</HintPath>
+  </Reference>
+  <Reference Include="ICSharpCode.SharpZipLib">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+  </Reference>
+  <Reference Include="JsonDiffPatch">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\JsonDiffPatch.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.CodeAnalysis">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.CodeAnalysis.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.CodeAnalysis.CSharp">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.Data.Sqlite">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.Data.Sqlite.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.Win32.SystemEvents">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.Win32.SystemEvents.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.WindowsAPICodePack">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+  </Reference>
+  <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+  </Reference>
+  <Reference Include="Mono.Cecil">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Mono.Cecil.dll</HintPath>
+  </Reference>
+  <Reference Include="Mono.Cecil.Mdb">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Mono.Cecil.Mdb.dll</HintPath>
+  </Reference>
+  <Reference Include="Mono.Cecil.Pdb">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Mono.Cecil.Pdb.dll</HintPath>
+  </Reference>
+  <Reference Include="Mono.Cecil.Rocks">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Mono.Cecil.Rocks.dll</HintPath>
+  </Reference>
+  <Reference Include="Mono.Nat">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Mono.Nat.dll</HintPath>
+  </Reference>
+  <Reference Include="MonoMod.Backports">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\MonoMod.Backports.dll</HintPath>
+  </Reference>
+  <Reference Include="MonoMod.Core">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\MonoMod.Core.dll</HintPath>
+  </Reference>
+  <Reference Include="MonoMod.Iced">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\MonoMod.Iced.dll</HintPath>
+  </Reference>
+  <Reference Include="MonoMod.ILHelpers">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\MonoMod.ILHelpers.dll</HintPath>
+  </Reference>
+  <Reference Include="MonoMod.Utils">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\MonoMod.Utils.dll</HintPath>
+  </Reference>
+  <Reference Include="Newtonsoft.Json">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
+  </Reference>
+  <Reference Include="Open.Nat">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Open.Nat.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Audio.OpenAL">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Audio.OpenAL.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Compute">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Compute.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Core">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Core.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Graphics">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Graphics.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Input">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Input.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Mathematics">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Mathematics.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Windowing.Common">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Windowing.Common.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Windowing.Desktop">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Windowing.Desktop.dll</HintPath>
+  </Reference>
+  <Reference Include="OpenTK.Windowing.GraphicsLibraryFramework">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\OpenTK.Windowing.GraphicsLibraryFramework.dll</HintPath>
+  </Reference>
+  <Reference Include="protobuf-net">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\protobuf-net.dll</HintPath>
+  </Reference>
+  <Reference Include="SharpAvi">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SharpAvi.dll</HintPath>
+  </Reference>
+  <Reference Include="SharpAvi.SkiaSharp">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SharpAvi.SkiaSharp.dll</HintPath>
+  </Reference>
+  <Reference Include="SkiaSharp">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SkiaSharp.dll</HintPath>
+  </Reference>
+  <Reference Include="SQLitePCLRaw.batteries_v2">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SQLitePCLRaw.batteries_v2.dll</HintPath>
+  </Reference>
+  <Reference Include="SQLitePCLRaw.core">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SQLitePCLRaw.core.dll</HintPath>
+  </Reference>
+  <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Collections.Immutable">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Collections.Immutable.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Drawing.Common">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Drawing.Common.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Private.ServiceModel">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Private.ServiceModel.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Reflection.Metadata">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Reflection.Metadata.dll</HintPath>
+  </Reference>
+  <Reference Include="System.ServiceModel">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.ServiceModel.dll</HintPath>
+  </Reference>
+  <Reference Include="System.ServiceModel.Primitives">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.ServiceModel.Primitives.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Text.Encodings.Web">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Text.Encodings.Web.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Text.Json">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\System.Text.Json.dll</HintPath>
+  </Reference>
+  <Reference Include="Tavis.JsonPatch">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
+  </Reference>
+  <Reference Include="VintagestoryAPI">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\VintagestoryAPI.dll</HintPath>
+  </Reference>
+  <Reference Include="VintagestoryLib">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\VintagestoryLib.dll</HintPath>
+  </Reference>
+  <Reference Include="VSCreativeMod">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
+  </Reference>
+  <Reference Include="VSEssentials">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Mods\VSEssentials.dll</HintPath>
+  </Reference>
+  <Reference Include="VSSurvivalMod">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
+  </Reference>
+  <Reference Include="Xceed.Wpf.AvalonDock">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Xceed.Wpf.AvalonDock.dll</HintPath>
+  </Reference>
+  <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+  </Reference>
+  <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+  </Reference>
+  <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+  </Reference>
+  <Reference Include="Xceed.Wpf.Toolkit">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\Xceed.Wpf.Toolkit.dll</HintPath>
+  </Reference>
+  <Reference Include="xplatforminterface">
+    <HintPath>..\..\..\..\..\Games\Vintagestory\Lib\xplatforminterface.dll</HintPath>
+  </Reference>
 </ItemGroup>
 
 </Project>
