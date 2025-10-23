@@ -10,6 +10,9 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
+  <Compile Remove="SDK\**" />
+  <EmbeddedResource Remove="SDK\**" />
+  <None Remove="SDK\**" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
