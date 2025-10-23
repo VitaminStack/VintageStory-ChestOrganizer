@@ -31,6 +31,14 @@ public class MergedInventory : InventoryBase {
         current.AddRange(containers);
     }
 
+    public static bool TryCloseDialog() {
+        if (dialog != null && dialog.IsOpened()) {
+            dialog.TryClose();
+            return true;
+        }
+        return false;
+    }
+
     private static void UpdateDialog(ICoreClientAPI api) {
         if (dialog == null) {
             dialog = new(Lang.Get("chestorganizer:title"), current, api);

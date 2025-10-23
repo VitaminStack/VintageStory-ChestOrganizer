@@ -36,6 +36,10 @@ public class Main : ModSystem {
     }
 
     public bool OpenAll(KeyCombination _) {
+        if (MergedInventory.TryCloseDialog()) {
+            return true;
+        }
+
         var player = api.World.Player;
         var reinforcement = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
 
